@@ -47,13 +47,11 @@ import com.example.coffee.ui.theme.textColor
 fun DetailScreen(backStackEntry: NavBackStackEntry, navController: NavHostController) {
     val name = backStackEntry.arguments?.getString("name")
     val price = backStackEntry.arguments!!.getString("price")
-    ModalNavigationDrawer(drawerContent = { /*TODO*/ }, content = {
         Scaffold(topBar = { HeaderUpper(name = name, navController = navController) }, bottomBar = {
             BottomNvi(
                 price = price
             )
         }, content = { Content() })
-    })
 }
 
 @Composable
